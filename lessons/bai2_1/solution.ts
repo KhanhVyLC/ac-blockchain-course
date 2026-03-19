@@ -1,15 +1,18 @@
 export class SmartContract {
     private message: string;
 
+    // Tương đương với việc lúc Deploy Contract, ta truyền giá trị khởi tạo
     constructor(initialMessage: string) {
-        // TODO: initialize the message with initialMessage
+        this.message = initialMessage; 
     }
 
+    // Tương đương với một transaction gọi hàm để thay đổi State trên Blockchain
     public updateMessage(newMsg: string): void {
-        // TODO: update the message with newMsg
+        this.message = newMsg; 
     }
 
+    // Tương đương với một hàm "view" trong Solidity để đọc dữ liệu mà không tốn gas
     public getMessage(): string {
-        // TODO: return the current message
+        return this.message; 
     }
 }
