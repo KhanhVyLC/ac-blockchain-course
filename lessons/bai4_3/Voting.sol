@@ -61,4 +61,25 @@ contract Voting {
         // Ghi log sự kiện vote
         emit Voted(msg.sender, _candidateId);
     }
+
+    // Hàm để người dùng thực hiện vote với phí 0.000001 ETH
+    function voteETH(uint _candidateId) public payable {
+        // Kiểm tra số ETH gửi kèm phải chính xác 0.000001 ETH (1e12 wei)
+        require(msg.value == 0.000001 ether, "Must send exactly 0.000001 ETH to vote!");
+        
+        // Kiểm tra xem người này đã vote chưa
+        require(!hasVoted[msg.sender], "You have already voted!");
+        
+        // Kiểm tra ID ứng viên có hợp lệ không (từ 1 đến tổng số ứng viên)
+        require(_candidateId > 0 && _candidateId <= candidatesCount, "Invalid candidate ID!");
+
+        // Đánh dấu người này đã vote để không được vote lại
+        hasVoted[msg.sender] = true;
+
+        // Tăng số phiếu cho ứng viên được chọn
+        candidates[_candidateId].voteCount++;
+
+        // Ghi log sự kiện vote
+        emit Voted(msg.sender, _candidateId);
+    }
 }
