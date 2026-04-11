@@ -1,6 +1,6 @@
 # 🧪 Bài tập TypeScript – Mô phỏng Smart Contract
 
-Trong bài học, bạn đã biết smart contract có thể lưu trữ và cập nhật dữ liệu.  
+Bạn đã biết smart contract có thể lưu trữ và cập nhật dữ liệu.  
 Giờ bạn sẽ mô phỏng lại điều đó bằng TypeScript.
 
 ---
