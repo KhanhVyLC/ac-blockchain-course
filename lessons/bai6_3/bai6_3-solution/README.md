@@ -1,6 +1,6 @@
 # Bài Tập 6.3 – Mint NFT bằng Hardhat
 
-- Viết, deploy và mint NFT ERC721 bằng Hardhat.
+ Viết, deploy và mint NFT ERC721 bằng Hardhat.
 
 ---
 
