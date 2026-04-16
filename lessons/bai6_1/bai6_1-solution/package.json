@@ -1,0 +1,21 @@
+{
+  "name": "my-token-project",
+  "version": "1.0.0",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run deploy/deploy.js --network sepolia",
+    "test-balance": "npx ts-node test.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.19.0",
+    "hardhat-deploy": "^0.11.34",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0",
+    "dotenv": "^16.0.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
+    "ethers": "^6.0.0"
+  }
+}
