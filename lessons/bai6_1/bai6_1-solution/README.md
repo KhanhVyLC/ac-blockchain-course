@@ -1,38 +1,15 @@
 # Bài Tập 6.1 – Viết ERC20 Token cơ bản
 
-🎯 Mục tiêu:
-- Viết và deploy ERC20 Token đơn giản sử dụng OpenZeppelin.
 
----
 
-## ✅ Yêu cầu
+## Chạy script thực thi
 
-1. Viết contract tên `MyToken`:
-   - Tên token: `MyToken`
-   - Symbol: `MTK`
-   - Tổng cung: 1,000,000 token
-   - Mint toàn bộ cho deployer trong constructor
-
-2. Viết script deploy:
-   - Deploy contract
-   - In địa chỉ contract
-
----
-
-## 💡 Gợi ý
-
-- Import OpenZeppelin ERC20:
-```solidity
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-```
-- Dùng `_mint(msg.sender, amount)` để tạo tổng cung ban đầu
-
----
-
-## 🧪 Chạy script deploy
-
-```bash
+npx hardhat compile
 npx hardhat deploy --network sepolia --tags deploy
-```
+npx ts-node test.ts
+---
 
-Sau khi deploy, chạy file test.ts để kiểm tra balance của địa chỉ deployer.
+## Kết quả
+
+<img width="1027" height="273" alt="image" src="https://github.com/user-attachments/assets/11fd8a3d-1de1-4175-a4aa-5539ff404f5f" />
+
